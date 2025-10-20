@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [{ "src": "**/*", "use": "@vercel/static" }],
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/scripts/(.*)", "dest": "/scripts/$1" },
+    { "src": "/Dox/(.*)", "dest": "/Dox/$1" },
+    { "src": "/(.*)\\.(?:js|css|jpg|png|gif|ico|svg)", "dest": "/$1.$2" },
+    { "src": "/(.+)\\.html", "dest": "/$1.html" },
+    { "src": "/(.*)", "dest": "/$1.html" }
+  ]
+}

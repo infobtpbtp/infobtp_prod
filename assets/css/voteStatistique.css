@@ -1,0 +1,33 @@
+.result-bar {
+    margin-bottom: 10px;
+    padding: 25px;
+    font-size: 20px;
+    
+}
+
+.result-label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 800;
+
+}
+.votesetpourcentage{
+    display: flex;
+    align-items: center;
+}
+.result-percentage-bar {
+    height: 20px;
+    background-color: #fff;
+    text-align: right;
+    color: white;
+    padding-right: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.lepourcentage{
+    color: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+}
+

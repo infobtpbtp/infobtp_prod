@@ -1,0 +1,96 @@
+.formbold-form-wrapper{
+    background: linear-gradient(0.25turn, #DBB600, #808080, #f69d3c);
+    border-radius: 10px;
+    padding: 25px 40px;
+    width:  100%;
+}
+.sondagepaticipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 30rem;
+    border-radius: 20px;
+    background: linear-gradient(0.25turn, #DBB600, #808080, #f69d3c);;
+}
+.formbold-main-wrapper{
+    display: flex;
+    gap: 20px;
+    margin: 50PX 0px;
+}
+
+.custremailform {
+    flex-direction: column;
+}
+.formbold-radio-label, .formbold-form-label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+.formbold-radio-label {
+    font-size: 20px;
+}
+
+.formbold-form-label {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.custremailform {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0;
+}
+.custremailform input[type=submit] {
+    background: crimson;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Work Sans,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    padding: 15px 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.custremailform .emailinp, .custremailform input[type=email] {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    padding: 17px;
+    text-align: left;
+}
+
+.dtlmainRt .custremailform input[type=email], .emailinp {
+    text-align: center!important;
+    width: 100%!important;
+}
+.custespcpe.custdlt2responone{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.newsmain{
+    background: #808080;
+    border-radius: 10px;
+    padding: 40px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 950PX) {
+    .formbold-main-wrapper{
+        display: block;
+    }
+    .sondagepaticipe {
+        width: 100%;
+        background: linear-gradient(0.25turn, #DBB600, #808080, #f69d3c);
+        margin-bottom: 2rem;
+        border-radius: 10px;
+    }
+}

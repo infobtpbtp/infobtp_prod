@@ -1,0 +1,19 @@
+.alert-box {
+    padding: 20px;
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Texte blanc */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert-box p {
+    color: #FFF;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}

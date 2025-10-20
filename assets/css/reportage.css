@@ -1,0 +1,146 @@
+/*  about page */
+
+.surveysPage .laquestionMain {
+    align-items: flex-end;
+    background: #0006fa;
+    background: linear-gradient(0.25turn, #DBB600, #808080, #f69d3c);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 40px;
+  }
+  .surveysPage .laquestionMain h3, p, a{
+    color: #fff;
+  }
+
+  .survey_trigger {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px 22px;
+    text-transform: uppercase;
+    
+}
+
+.laquestionRt{
+    width: 45%;
+    text-align: right;
+}
+
+.laquestionRt :hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-details.section-padding30 {
+    padding-top: 1px;
+}
+.newsmain {
+    background: #808080;
+    border-radius: 10px;
+    padding: 40px;
+    margin-left: 10px;
+    text-align: center;
+}
+.newsmain h2, .newsmain h3 {
+    color: #fff;
+    font-family: Work Sans,sans-serif;
+    margin: 0;
+}
+.dtlmainRt .newsmain p {
+    font-size: 16px;
+    line-height: 23px;
+}
+.sondagepaticipe {
+    width: 65%;
+}
+.custremailform {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.dtlmainRt .custremailform {
+    flex-wrap: wrap;
+}
+.dtlmainRt .custremailform {
+    flex-direction: column;
+}
+
+
+.custremailform input[type=submit] {
+    background: crimson;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Work Sans,sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    outline: none;
+    padding: 15px 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.custremailform .emailinp, .custremailform input[type=email] {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    padding: 17px;
+    text-align: left;
+}
+
+.dtlmainRt .custremailform input[type=email], .emailinp {
+    text-align: center!important;
+    width: 100%!important;
+}
+
+
+.nombredevote {
+    padding-left: 20px;
+    
+}
+
+
+
+
+.custespcpe.custdlt2responone{
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 300ox;
+}
+.custespcpe.custdlt2responone img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 991px){
+    .dtlmainLft, .dtlmainRt, .sondagepaticipe {
+        width: 100%;
+    }
+}

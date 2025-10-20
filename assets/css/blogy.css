@@ -1,0 +1,88 @@
+/* Ajoutez ces styles à votre fichier CSS séparé */
+.main-video {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.line{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin: 70px 0;
+}
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+/* Styles restants restent les mêmes */
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video-item {
+    padding: 5px;
+    background-color: #fff;
+    width: 30%; /* Ajustez la largeur comme vous le souhaitez */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.video-thumbnailpp {
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.video-thumbnailpp img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.video-thumbnail {
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    
+    height: 300px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.1); /* Léger zoom au survol */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.video-details {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Répétez les styles ci-dessus pour chaque vidéo */
+/* Ajoutez ces styles au fichier CSS séparé */
