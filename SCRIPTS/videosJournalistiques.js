@@ -1,7 +1,7 @@
 // Fonction pour récupérer toutes les vidéos
 async function fetchVideos() {
     try {
-        const response = await fetch('https://infobtpbackend.vercel.app/videosjournalistiques');
+        const response = await fetch('https://infobtp-website-indol.vercel.app/videosjournalistiques');
         const videos = await response.json();
         console.log(videos);
         return videos.sort((a, b) => new Date(b.publicationDate) - new Date(a.publicationDate));

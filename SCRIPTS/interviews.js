@@ -16,7 +16,7 @@ const principalideo = document.querySelector('.principalVideo');
 function getInterwiews () {
 
     
-fetch(`https://infobtpbackend.vercel.app/interviews`)
+fetch(`https://infobtp-website-indol.vercel.app/interviews`)
 .then(response => response.json())
 .then(data => {
     //utilisation des données recuperées dépuis la base de donnée

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const surveyId = urlParams.get('surveyId');
     //const API_URL = process.env.API_URL;
     console.log("test")
-    fetch(`https://infobtpbackend.vercel.app/sondages/${surveyId}`)
+    fetch(`https://infobtp-website-indol.vercel.app/sondages/${surveyId}`)
         .then(reponse => reponse.json())
         .then(data => {
             console.log(data)

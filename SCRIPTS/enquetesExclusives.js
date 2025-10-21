@@ -23,7 +23,7 @@ function deuxPremieresPhrases(texte) {
 }
 
 function getArticle () {
-    fetch(`https://infobtpbackend.vercel.app/enquetesExclusives`)
+    fetch(`https://infobtp-website-indol.vercel.app/enquetesExclusives`)
     .then(response => response.json())
     .then(data => {
         console.log(data);

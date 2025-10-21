@@ -18,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     };
     //const API_URL = process.env.API_URL;
 
-    fetch(`https://infobtpbackend.vercel.app/contact`, { 
+    fetch(`https://infobtp-website-indol.vercel.app/contact`, { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

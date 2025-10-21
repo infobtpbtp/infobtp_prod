@@ -30,7 +30,7 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 
     var email = document.getElementById('abonnemenrEmail').value;
 
-    fetch(`https://infobtpbackend.vercel.app/abonnement`, { 
+    fetch(`https://infobtp-website-indol.vercel.app/abonnement`, { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -3,7 +3,7 @@
 const sondagepaticipe = document.querySelector('.sondagepaticipe');
 //const API_URL = process.env.API_URL;
 
-fetch(`https://infobtpbackend.vercel.app/sondages`)
+fetch(`https://infobtp-website-indol.vercel.app/sondages`)
     .then(response =>  response.json())
     .then(data => {
         console.log(data)
