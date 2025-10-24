@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25">
+                    <p class="about-pera1 mb-25" style="font-size: 18px;">
                         ${data.titres.contenuGrandTitre}
                     </p>
                 </div> 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25">
+                    <p class="about-pera1 mb-25" style="font-size: 18px;">
                     ${data.titres.sousTitres[0].contenuSousTitre} 
                         
                         </p>
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25">
+                    <p class="about-pera1 mb-25" style="font-size: 18px;">
                     ${data.titres.sousTitres[1].contenuSousTitre} 
                         
                         </p>
