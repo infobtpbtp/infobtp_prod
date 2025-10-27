@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[0].sousTitre} </h3>
                 </div>
+                <div class="about-img">
+                    <img src="${data.titres.imageSecondaire1}" alt="">
+                </div>
                 <div class="about-prea">
                     <p class="about-pera1 mb-25">
                     ${data.titres.sousTitres[0].contenuSousTitre} 
@@ -73,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[1].sousTitre} </h3>
+                </div>
+                <div class="about-img">
+                    <img src="${data.titres.imageSecondaire2}" alt="">
                 </div>
                 <div class="about-prea">
                     
