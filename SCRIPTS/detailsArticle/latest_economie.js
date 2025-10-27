@@ -39,26 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
             let articleDetailsItems = 
                 `
                 <div class="about-right mb-90">
-                
                 <div class="about-img">
                     <img src="${data.titres.imageGrandTitre}" alt="">
                 </div>
-               
+                
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25" style="font-size: 18px;">
+                    <p class="about-pera1 mb-25" style="font-size: 18px>
                         ${data.titres.contenuGrandTitre}
                     </p>
                 </div> 
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[0].sousTitre} </h3>
                 </div>
+                <div class="about-img">
+                    ${data.titres.imageSecondaire1 ? `<img src="${data.titres.imageSecondaire1}" alt="Image secondaire 1">` : ''}
+                </div>
                 <div class="about-prea">
-                    
-                    <p class="about-pera1 mb-25" style="font-size: 18px;">
+                    <p class="about-pera1 mb-25" style="font-size: 18px>
                     ${data.titres.sousTitres[0].contenuSousTitre} 
-                        
-                        </p>
+                    </p>
                 </div>
                 <div style="margin: auto; background-color: #d9d8ce; border-radius: 5px; width:350px; padding: 10px; position: relative;">
                     <div style="position: absolute; top: -10px; text-align: center; border-radius: 5px; left: 10px; background-color: #ff0000; color: white; padding: 5px 10px; font-weight: bold; font-size: 14px;">
@@ -74,11 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[1].sousTitre} </h3>
                 </div>
+                <div class="about-img">
+                    ${data.titres.imageSecondaire2 ? `<img src="${data.titres.imageSecondaire2}" alt="Image secondaire 2">` : ''}
+                </div>
                 <div class="about-prea">
-                    
-                    <p class="about-pera1 mb-25" style="font-size: 18px;">
-                    ${data.titres.sousTitres[1].contenuSousTitre} 
-                        
+
+                    <p class="about-pera1 mb-25" style="font-size: 18px">
+                    ${data.titres.sousTitres[1].contenuSousTitre}
+
                         </p>
                 </div>
                 <div class="social-share pt-30">

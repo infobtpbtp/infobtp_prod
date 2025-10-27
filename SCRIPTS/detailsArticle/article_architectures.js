@@ -48,15 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25">
+                    <p class="about-pera1 mb-25" style="font-size: 18px>
                         ${data.titres.contenuGrandTitre}
                     </p>
                 </div> 
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[0].sousTitre} </h3>
                 </div>
+                <div class="about-img">
+                    ${data.titres.imageSecondaire1 ? `<img src="${data.titres.imageSecondaire1}" alt="Image secondaire 1">` : ''}
+                </div>
                 <div class="about-prea">
-                    <p class="about-pera1 mb-25">
+                    <p class="about-pera1 mb-25" style="font-size: 18px>
                     ${data.titres.sousTitres[0].contenuSousTitre} 
                     </p>
                 </div>
@@ -74,11 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[1].sousTitre} </h3>
                 </div>
+                <div class="about-img">
+                    ${data.titres.imageSecondaire2 ? `<img src="${data.titres.imageSecondaire2}" alt="Image secondaire 2">` : ''}
+                </div>
                 <div class="about-prea">
-                    
-                    <p class="about-pera1 mb-25">
-                    ${data.titres.sousTitres[1].contenuSousTitre} 
-                        
+
+                    <p class="about-pera1 mb-25" style="font-size: 18px">
+                    ${data.titres.sousTitres[1].contenuSousTitre}
+
                         </p>
                 </div>
                 <div class="social-share pt-30">
