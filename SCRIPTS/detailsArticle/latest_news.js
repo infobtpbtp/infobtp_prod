@@ -55,9 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[0].sousTitre} </h3>
                 </div>
+                ${data.titres.imageSecondaire1 ? `
                 <div class="about-img">
-                    <img src="${data.titres.imageSecondaire1}" alt="">
-                </div>
+                    <img src="${data.titres.imageSecondaire1}" alt="Image secondaire 1">
+                </div>` : ''}
                 <div class="about-prea">
                     <p class="about-pera1 mb-25">
                     ${data.titres.sousTitres[0].contenuSousTitre} 
@@ -77,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="section-tittle mb-30 pt-30">
                     <h3>${data.titres.sousTitres[1].sousTitre} </h3>
                 </div>
+                ${data.titres.imageSecondaire2 ? `
                 <div class="about-img">
-                    <img src="${data.titres.imageSecondaire2}" alt="">
-                </div>
+                    <img src="${data.titres.imageSecondaire2}" alt="Image secondaire 2">
+                </div>` : ''}
                 <div class="about-prea">
-                    
                     <p class="about-pera1 mb-25">
                     ${data.titres.sousTitres[1].contenuSousTitre} 
                         
