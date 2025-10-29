@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function updateVote(surveyId, optionId) {
-    fetch(`http://localhost:5500/sondages/${surveyId}/${optionId}`, {
+    fetch(`https://infobtp-website-indol.vercel.app/sondages/${surveyId}/${optionId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

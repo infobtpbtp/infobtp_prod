@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="about-prea">
                     
-                    <p class="about-pera1 mb-25" style="font-size: 18px; text-align: justify;">
+                    <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
                         ${data.titres.contenuGrandTitre}
                     </p>
                 </div> 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${data.titres.imageSecondaire1 ? `<img src="${data.titres.imageSecondaire1}" alt="Image secondaire 1">` : ''}
                 </div>
                 <div class="about-prea">
-                    <p class="about-pera1 mb-25" style="font-size: 18px; text-align: justify;">
+                    <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
                     ${data.titres.sousTitres[0].contenuSousTitre} 
                     </p>
                 </div>
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="about-prea">
 
-                    <p class="about-pera1 mb-25" style="font-size: 18px; text-align: justify;">
+                    <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
                     ${data.titres.sousTitres[1].contenuSousTitre}
 
                         </p>
