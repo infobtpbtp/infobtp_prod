@@ -213,7 +213,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Merriweather", serif;
   color: #0b1c39;
   margin-top: 0px;
   font-style: normal;
@@ -223,7 +223,7 @@ h6 {
 
 /* line 27, ../../SAIFUL/Running_project/248. Magazine & News/assets/scss/_common.scss */
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Merriweather", serif;
   color: #506172;
   font-size: 16px;
   line-height: 30px;
