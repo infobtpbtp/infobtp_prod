@@ -1,14 +1,13 @@
-
-
 /* 1. Theme default css */
 
 // @import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700,800,900|Roboto:100,300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
- body {
+body {
 	font-family: $font_2;
 	font-weight: normal;
 	font-style: normal;
 }
+
 h1,
 h2,
 h3,
@@ -18,9 +17,6 @@ h6 {
 	font-family: $font_1;
 	color: $heading-color;
 	margin-top: 0px;
-	font-style: normal;
-	font-weight: 500;
-	text-transform: normal;
 }
 p {
 	font-family:$font_2;
@@ -432,9 +428,6 @@ hr {
 	color:red;
 	
 }
-
-
-
 
 /* button style */
 	.breadcrumb > .active {
