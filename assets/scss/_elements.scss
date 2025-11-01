@@ -1098,15 +1098,15 @@ $black: #000;
 
 
 
-
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+    // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Merriweather', serif;
     }
     .formbold-main-wrapper {
       display: flex;

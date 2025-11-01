@@ -102,7 +102,7 @@
   color: #ff656a !important;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -201,7 +201,7 @@
 /* 1. Theme default css */
 /* line 8, ../../SAIFUL/Running_project/248. Magazine & News/assets/scss/_common.scss */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: normal;
   font-style: normal;
 }
