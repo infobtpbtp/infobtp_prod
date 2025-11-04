@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log(articleId)
     if (articleId) {
-        fetch(`https://infobtpbackend.vercel.app/architecture/${articleId}`)
+        fetch(`https://infobtp-website-indol.vercel.app/architecture/${articleId}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);

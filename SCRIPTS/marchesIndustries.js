@@ -24,7 +24,7 @@ function deuxPremieresPhrases(texte) {
 }
 
 function getArticle () {
-    fetch(`https://infobtpbackend.vercel.app/marchesIndustries`)
+    fetch(`https://infobtp-website-indol.vercel.app/marchesIndustries`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
