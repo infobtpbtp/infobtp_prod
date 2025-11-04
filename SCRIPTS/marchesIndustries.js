@@ -105,7 +105,7 @@ function getArticle () {
         articleItem.forEach(item => {
             item.addEventListener('click', () => {
                 const articleId = item.getAttribute('data-article-id');
-                window.location.href = `article_marchesindustries.html?id=${articleId}`;
+                window.location.href = `article_marcheindustries.html?id=${articleId}`;
             })
             
         });
