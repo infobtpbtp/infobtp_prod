@@ -94,15 +94,17 @@
 /* Container du popup */
 .popup-container {
     position: relative;
-    max-width: 90%;
-    max-height: 90vh;
+    max-width: 95vw;
+    max-height: 95vh;
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     transform: scale(0.7) translateY(-50px);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    overflow: hidden;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .popup-overlay.active .popup-container {
@@ -144,10 +146,11 @@
 /* Image du popup */
 .popup-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 750px;
     height: auto;
     display: block;
     border-radius: 20px;
+    object-fit: contain;
 }
 
 /* Contenu additionnel sous l'image */
