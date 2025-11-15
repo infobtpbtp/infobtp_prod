@@ -1,0 +1,81 @@
+(function(){
+  // Create overlay DOM once and reuse
+  let overlay = null;
+  let autoCloseTimer = null;
+
+  function createOverlay() {
+    if (overlay) return overlay;
+    overlay = document.createElement('div');
+    overlay.className = 'image-popup-overlay';
+    overlay.innerHTML = `
+      <div class="image-popup-box enter" role="dialog" aria-modal="true">
+        <button class="image-popup-close" aria-label="Fermer">&times;</button>
+        <img class="image-popup-img" src="" alt="Image" />
+        <div class="image-popup-caption" aria-hidden="false"></div>
+      </div>
+    `;
+
+    // Close when clicking outside image-box
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closePopup();
+    });
+
+    // Close button
+    overlay.querySelector('.image-popup-close').addEventListener('click', () => closePopup());
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (!overlay) return;
+      if (e.key === 'Escape' && overlay.classList.contains('show')) {
+        closePopup();
+      }
+    });
+
+    document.body.appendChild(overlay);
+    return overlay;
+  }
+
+  function showPopup(src, options = {}){
+    const { caption = '', duration = 5000, alt = '' } = options;
+    const o = createOverlay();
+    const img = o.querySelector('.image-popup-img');
+    const cap = o.querySelector('.image-popup-caption');
+
+    // set content
+    img.src = src;
+    img.alt = alt || caption || 'Image';
+    cap.textContent = caption || '';
+
+    // show
+    requestAnimationFrame(() => {
+      o.classList.add('show');
+    });
+
+    // reset timer if present
+    if (autoCloseTimer) {
+      clearTimeout(autoCloseTimer);
+      autoCloseTimer = null;
+    }
+
+    if (duration && duration > 0) {
+      autoCloseTimer = setTimeout(() => {
+        closePopup();
+      }, duration);
+    }
+  }
+
+  function closePopup(){
+    if (!overlay) return;
+    overlay.classList.remove('show');
+    // optionally remove src after transition to free memory
+    const img = overlay.querySelector('.image-popup-img');
+    if (img) {
+      setTimeout(()=>{ img.src = ''; }, 300); // after fade
+    }
+    if (autoCloseTimer) { clearTimeout(autoCloseTimer); autoCloseTimer = null; }
+  }
+
+  // Expose globally
+  window.showImagePopup = showPopup;
+  window.closeImagePopup = closePopup;
+})();
