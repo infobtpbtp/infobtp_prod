@@ -10,18 +10,7 @@
 
     gtag('config', 'G-846HDG5LYJ');
     </script>
-    <script>
-      // initialize auto popup via popup module (keeps logic inside popup.js)
-      if (window.initAutoPopup) {
-        window.initAutoPopup({
-          imgPath: 'assets/img/news/pub.jpg',
-          caption: 'Publicité INFOBTP',
-          duration: 5000,
-          delay: 2000,
-          oncePerSessionKey: 'popup_shown'
-        });
-      }
-    </script>
+    
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Publi-reportage </title>
@@ -59,6 +48,18 @@
     </div>
 </div>
 <!-- Preloader Start -->
+
+ <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+            <button class="close-btn" id="closeBtn" aria-label="Fermer">×</button>
+            
+            <img src="assets/img/news/pub.jpg" 
+                 alt="Image de promotion" 
+                 class="popup-image">
+        </div>
+    </div>
+<!-- Popup Overlay End -->
 
 <header>
     <!-- Header Start -->
@@ -442,7 +443,7 @@
 
 <!-- JS here -->
     <!-- button search -->
-        <script src="SCRIPTS/searchButton.js"></script>
+    <script src="SCRIPTS/searchButton.js"></script>
     <script src="SCRIPTS/popup.js"></script>
     <!-- button search  -->
     <script src="SCRIPTS/publicreportage.js"></script>

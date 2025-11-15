@@ -125,3 +125,52 @@
 
   window.initAutoPopup = initAutoPopup;
 })();
+
+
+const popupOverlay = document.getElementById('popupOverlay');
+const closeBtn = document.getElementById('closeBtn');
+const ctaBtn = document.getElementById('ctaBtn');
+
+  // Fonction pour afficher le popup
+  function showPopup() {
+      popupOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Empêche le scroll
+  }
+
+  // Fonction pour fermer le popup
+  function closePopup() {
+      popupOverlay.classList.remove('active');
+      document.body.style.overflow = ''; // Réactive le scroll
+  }
+
+  // Affichage automatique après 5 secondes
+  setTimeout(showPopup, 5000);
+
+  // Fermeture au clic sur le bouton de fermeture
+  closeBtn.addEventListener('click', closePopup);
+
+  // Fermeture au clic sur l'overlay (en dehors du popup)
+  popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) {
+          closePopup();
+      }
+  });
+
+  // Fermeture avec la touche Échap
+  document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+          closePopup();
+      }
+  });
+
+  // Action du bouton CTA
+  // ctaBtn.addEventListener('click', () => {
+  //     alert('Redirection vers la page de l\'offre !');
+  //     closePopup();
+  //     // Vous pouvez ajouter ici : window.location.href = 'votre-url';
+  // });
+
+  // Empêche la propagation du clic sur le container
+  document.querySelector('.popup-container').addEventListener('click', (e) => {
+      e.stopPropagation();
+  });
