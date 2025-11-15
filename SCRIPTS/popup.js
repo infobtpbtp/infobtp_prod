@@ -2,6 +2,7 @@
   // Create overlay DOM once and reuse
   let overlay = null;
   let autoCloseTimer = null;
+  let escListenerAttached = false;
 
   function createOverlay() {
     if (overlay) return overlay;
@@ -10,7 +11,7 @@
     overlay.innerHTML = `
       <div class="image-popup-box enter" role="dialog" aria-modal="true">
         <button class="image-popup-close" aria-label="Fermer">&times;</button>
-        <img class="image-popup-img" src="" alt="Image" />
+        <img class="image-popup-img" src="" alt="" loading="lazy" />
         <div class="image-popup-caption" aria-hidden="false"></div>
       </div>
     `;
@@ -21,21 +22,32 @@
     });
 
     // Close button
-    overlay.querySelector('.image-popup-close').addEventListener('click', () => closePopup());
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      if (!overlay) return;
-      if (e.key === 'Escape' && overlay.classList.contains('show')) {
-        closePopup();
-      }
+    overlay.querySelector('.image-popup-close').addEventListener('click', (e) => {
+      e.stopPropagation();
+      closePopup();
     });
 
     document.body.appendChild(overlay);
     return overlay;
   }
 
+  // Attach ESC listener once globally
+  function attachEscListener() {
+    if (escListenerAttached) return;
+    escListenerAttached = true;
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay && overlay.classList.contains('show')) {
+        closePopup();
+      }
+    });
+  }
+
   function showPopup(src, options = {}){
+    if (!src) {
+      console.error('showImagePopup: src est obligatoire');
+      return;
+    }
+
     const { caption = '', duration = 5000, alt = '' } = options;
     const o = createOverlay();
     const img = o.querySelector('.image-popup-img');
@@ -46,10 +58,11 @@
     img.alt = alt || caption || 'Image';
     cap.textContent = caption || '';
 
-    // show
-    requestAnimationFrame(() => {
-      o.classList.add('show');
-    });
+    // Attach ESC listener once
+    attachEscListener();
+
+    // show overlay immediately
+    o.classList.add('show');
 
     // reset timer if present
     if (autoCloseTimer) {
@@ -67,7 +80,7 @@
   function closePopup(){
     if (!overlay) return;
     overlay.classList.remove('show');
-    // optionally remove src after transition to free memory
+    // reset src after transition to free memory
     const img = overlay.querySelector('.image-popup-img');
     if (img) {
       setTimeout(()=>{ img.src = ''; }, 300); // after fade
