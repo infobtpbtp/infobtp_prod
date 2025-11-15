@@ -5277,7 +5277,7 @@ hr {
   top: 3px;
   transition: all 0.15s ease-in-out;
   width: 5px;
-  font-family: fontawesome;
+  font-family: "Merriweather", serif;
   color: #919191;
   font-size: 15px;
 }
