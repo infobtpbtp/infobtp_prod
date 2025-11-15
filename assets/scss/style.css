@@ -120,7 +120,7 @@
   color: #ff2143 !important;
   display: inline-block;
   padding: 18px 44px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 14px;
   font-weight: 400;
   border: 0;
@@ -200,7 +200,7 @@
 
 /* 1. Theme default css */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -211,7 +211,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   color: #051441;
   margin-top: 0px;
   font-style: normal;
@@ -220,7 +220,7 @@ h6 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   color: #506172;
   font-size: 16px;
   line-height: 30px;
@@ -2457,7 +2457,7 @@ hr {
 }
 .section-tittles span {
   font-size: 18px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: 500;
   margin-bottom: 17px;
   text-transform: uppercase;
@@ -3796,7 +3796,7 @@ hr {
   color: #ff2143;
   font-size: 14px;
   font-weight: 300;
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   display: block;
   position: relative;
   margin-left: 50px;
@@ -3831,7 +3831,7 @@ hr {
 
 .about-details .about-details-cap h4 {
   font-size: 30px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
   margin-bottom: 30px;
   color: #000a2d;
@@ -3912,7 +3912,7 @@ hr {
 }
 .footer-area .single-footer-caption .footer-tittle h4 {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 22px;
   margin-bottom: 38px;
   font-weight: 700;
@@ -5190,7 +5190,7 @@ hr {
   color: #fff;
   font-weight: 900;
   margin-bottom: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Merriweather", serif;
   text-transform: capitalize;
 }
 @media (max-width: 767px) {
@@ -5243,7 +5243,7 @@ hr {
   cursor: pointer;
   display: block;
   float: left;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
   font-weight: normal;
   width: 100% !important;
   /* height: 42px; */
@@ -5406,7 +5406,7 @@ hr {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 .formbold-main-wrapper {
