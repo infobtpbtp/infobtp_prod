@@ -91,4 +91,37 @@
   // Expose globally
   window.showImagePopup = showPopup;
   window.closeImagePopup = closePopup;
+
+  /**
+   * Initialize an automatic popup show behavior.
+   * options: { imgPath, caption, duration, delay, oncePerSessionKey }
+   */
+  function initAutoPopup(options = {}){
+    const {
+      imgPath = '',
+      caption = '',
+      duration = 5000,
+      delay = 2000,
+      oncePerSessionKey = 'popup_shown'
+    } = options;
+
+    try {
+      if (!imgPath) return; // nothing to do
+      if (oncePerSessionKey && sessionStorage.getItem(oncePerSessionKey)) return;
+
+      setTimeout(() => {
+        const img = new Image();
+        img.onload = function(){
+          if (window.showImagePopup) {
+            showImagePopup(imgPath, { caption, duration });
+            try { if (oncePerSessionKey) sessionStorage.setItem(oncePerSessionKey, '1'); } catch(e){}
+          }
+        };
+        img.onerror = function(){ console.warn('initAutoPopup: image not found', imgPath); };
+        img.src = imgPath;
+      }, delay);
+    } catch(e){ console.error('initAutoPopup error', e); }
+  }
+
+  window.initAutoPopup = initAutoPopup;
 })();

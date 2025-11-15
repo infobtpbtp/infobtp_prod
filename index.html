@@ -10,6 +10,18 @@
 
     gtag('config', 'G-846HDG5LYJ');
     </script>
+    <script>
+      // initialize auto popup via popup module (keeps logic inside popup.js)
+      if (window.initAutoPopup) {
+        window.initAutoPopup({
+          imgPath: 'assets/img/news/pub.jpg',
+          caption: 'Publicité INFOBTP',
+          duration: 5000,
+          delay: 2000,
+          oncePerSessionKey: 'popup_shown'
+        });
+      }
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Publi-reportage </title>
