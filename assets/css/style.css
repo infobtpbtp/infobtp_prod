@@ -166,3 +166,7 @@ p {
   font-family: "Merriweather", serif;
   
 }
+
+#navigation li a{
+  font-weight: bold;
+}
