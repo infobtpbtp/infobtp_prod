@@ -87,6 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         </p>
                 </div>
+                <div class="section-tittle mb-30 pt-30">
+                    <h3>${data.titres.sousTitres[2].sousTitre} </h3>
+                </div>
+                <div class="about-prea">
+
+                    <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
+                    ${data.titres.sousTitres[2].contenuSousTitre}
+
+                        </p>
+                </div>
+                
                 <div class="social-share pt-30">
                     <div class="section-tittle">
                         <h3 class="mr-20">Share:</h3>
