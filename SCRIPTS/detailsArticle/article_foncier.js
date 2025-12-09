@@ -20,11 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            //Manipulation des details de l'article
+            if (!data || !data.titres) {
+                console.error('Données invalides reçues du serveur');
+                return;
+            }
+
+            // Manipulation des details de l'article
             const articleDetails = document.querySelector('.articleDetails');
             const titredetails = document.querySelector('.titredetails');
-            titredetails.innerHTML = 
-            `
+            titredetails.innerHTML = `
                 <div class="heading-news mb-30 pt-30" style="max-width: 800px; margin: 0 auto;">
                     <h3 style="text-align: center; word-wrap: break-word;">
                         ${data.titres.grandTitre}
@@ -33,64 +37,78 @@ document.addEventListener('DOMContentLoaded', () => {
                         Publié le : ${convertionDate(data.datePublication)} par ${data.auteur}
                     </p>
                 </div>
+            `;
 
-            `
-            let articleDetailsItems = 
-                `
+            const hasSousTitres = Array.isArray(data.titres.sousTitres);
+            const s0 = hasSousTitres && data.titres.sousTitres[0] ? data.titres.sousTitres[0] : null;
+            const s1 = hasSousTitres && data.titres.sousTitres[1] ? data.titres.sousTitres[1] : null;
+            const s2 = hasSousTitres && data.titres.sousTitres[2] ? data.titres.sousTitres[2] : null;
+
+            let articleDetailsItems = `
                 <div class="about-right mb-90">
                 <div class="about-img">
-                    <img src="${data.titres.imageGrandTitre}" alt="">
+                    <img src="${data.titres.imageGrandTitre || ''}" alt="">
                 </div>
                 
                 <div class="about-prea">
-                    
                     <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
-                        ${data.titres.contenuGrandTitre}
+                        ${data.titres.contenuGrandTitre || ''}
                     </p>
-                </div> 
+                </div>`;
+
+            if (s0) {
+                articleDetailsItems += `
                 <div class="section-tittle mb-30 pt-30">
-                    <h3>${data.titres.sousTitres[0].sousTitre} </h3>
+                    <h3>${s0.sousTitre} </h3>
                 </div>
                 <div class="about-img">
                     ${data.titres.imageSecondaire1 ? `<img src="${data.titres.imageSecondaire1}" alt="Image secondaire 1">` : ''}
                 </div>
                 <div class="about-prea">
                     <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
-                    ${data.titres.sousTitres[0].contenuSousTitre} 
+                    ${s0.contenuSousTitre || ''}
                     </p>
                 </div>
                 <div style="margin: auto; background-color: #d9d8ce; border-radius: 5px; width:350px; padding: 10px; position: relative;">
                     <div style="position: absolute; top: -10px; text-align: center; border-radius: 5px; left: 10px; background-color: #ff0000; color: white; padding: 5px 10px; font-weight: bold; font-size: 14px;">
                         Lire aussi
                     </div>
-                    <a href="${data.externalLink}" style="text-decoration: none; color: #333; font-size: 18px; font-weight: bold; display: block; margin-top: 15px;  padding: 5px 10px; ">
+                    <a href="${data.externalLink || '#'}" style="text-decoration: none; color: #333; font-size: 18px; font-weight: bold; display: block; margin-top: 15px;  padding: 5px 10px; ">
                         <p style="text-align: center;">
-                            ${data.externalLinkTitle}
+                            ${data.externalLinkTitle || ''}
                         </p>
                     </a>
-                    
-                </div>
+                </div>`;
+            }
+
+            if (s1) {
+                articleDetailsItems += `
                 <div class="section-tittle mb-30 pt-30">
-                    <h3>${data.titres.sousTitres[1].sousTitre} </h3>
+                    <h3>${s1.sousTitre} </h3>
                 </div>
                 <div class="about-img">
                     ${data.titres.imageSecondaire2 ? `<img src="${data.titres.imageSecondaire2}" alt="Image secondaire 2">` : ''}
                 </div>
                 <div class="about-prea">
-
                     <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
-                    ${data.titres.sousTitres[1].contenuSousTitre}
+                    ${s1.contenuSousTitre || ''}
+                    </p>
+                </div>`;
+            }
 
-                        </p>
-                </div>
+            if (s2) {
+                articleDetailsItems += `
                 <div class="section-tittle mb-30 pt-30">
-                    <h3>${data.titres.sousTitres[2].sousTitre} </h3>
+                    <h3>${s2.sousTitre} </h3>
                 </div>
                 <div class="about-prea">
                     <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
-                    ${data.titres.sousTitres[2].contenuSousTitre}
+                    ${s2.contenuSousTitre || ''}
                     </p>
-                </div>
+                </div>`;
+            }
+
+            articleDetailsItems += `
                 <div class="social-share pt-30">
                     <div class="section-tittle">
                         <h3 class="mr-20">Share:</h3>
@@ -102,10 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div>`;
 
-                `;
-          
             articleDetails.innerHTML = articleDetailsItems;
         })
         .catch(error => console.error("Erreur lors de la recuperation des détails de l'article"));
