@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(articleId)
     if (articleId) {
         fetch(`https://infobtp-website-indol.vercel.app/architectures/${articleId}`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             console.log(data);
             if (!data || !data.titres) {
@@ -28,7 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Manipulation des details de l'article
             const articleDetails = document.querySelector('.articleDetails');
             const titredetails = document.querySelector('.titredetails');
-            titredetails.innerHTML = `
+            
+            if (!articleDetails || !titredetails) {
+                console.error('Éléments DOM manquants: .articleDetails ou .titredetails');
+                return;
+            }
+
+            try {
+                titredetails.innerHTML = `
                 <div class="heading-news mb-30 pt-30" style="max-width: 800px; margin: 0 auto;">
                     <h3 style="text-align: center; word-wrap: break-word;">
                         ${data.titres.grandTitre}
@@ -125,9 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`;
 
-            articleDetails.innerHTML = articleDetailsItems;
+                articleDetails.innerHTML = articleDetailsItems;
+            } catch (err) {
+                console.error('Erreur lors du rendu de l\'article:', err);
+            }
         })
-        .catch(error => console.error("Erreur lors de la recuperation des détails de l'article"));
+        .catch(error => console.error("Erreur lors de la recuperation des détails de l'article:", error));
     } else {
         console.error(" ID de l'article non fornit");
     }
