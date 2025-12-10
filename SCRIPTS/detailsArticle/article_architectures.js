@@ -96,20 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
             }
 
-            if (s2) {
-                articleDetailsItems += `
-                <div class="section-tittle mb-30 pt-30">
-                    <h3>${s2.sousTitre} </h3>
-                </div>
-                <div class="about-img">
-                    ${data.titres.imageSecondaire3 ? `<img src="${data.titres.imageSecondaire3}" alt="Image secondaire 3">` : ''}
-                </div>
-                <div class="about-prea">
-                    <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
-                    ${s2.contenuSousTitre || ''}
-                    </p>
-                </div>`;
-            }
+            // if (s2) {
+            //     articleDetailsItems += `
+            //     <div class="section-tittle mb-30 pt-30">
+            //         <h3>${s2.sousTitre} </h3>
+            //     </div>
+            //     <div class="about-img">
+            //         ${data.titres.imageSecondaire3 ? `<img src="${data.titres.imageSecondaire3}" alt="Image secondaire 3">` : ''}
+            //     </div>
+            //     <div class="about-prea">
+            //         <p class="about-pera1 mb-25" style="font-size: 16px; text-align: justify;">
+            //         ${s2.contenuSousTitre || ''}
+            //         </p>
+            //     </div>`;
+            // }
 
             articleDetailsItems += `
                 <div class="social-share pt-30">
